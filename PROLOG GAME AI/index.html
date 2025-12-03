@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prolog Tic-Tac-Toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tic-Tac-Toe <span class="badge">AI Powered</span></h1>
+
+        <div class="controls">
+            <button id="mode-2player" class="mode-btn active">
+                <span class="icon">👥</span> 2 Player
+            </button>
+            <button id="mode-robot" class="mode-btn">
+                <span class="icon">🤖</span> Vs Robot
+            </button>
+        </div>
+
+        <div class="game-area">
+            <div class="thinking-overlay" id="thinking-overlay">
+                <div class="spinner"></div>
+            </div>
+            <div class="status" id="status">Player X's Turn</div>
+            <div class="board" id="board">
+                <div class="winning-line" id="winning-line"></div>
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+        </div>
+
+        <button id="reset-btn" class="reset-btn">
+            <span class="icon">🔄</span> Reset Game
+        </button>
+    </div>
+
+    <!-- Winner Modal -->
+    <div id="winner-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="winner-title">Winner!</h2>
+            <p id="winner-message">Player X takes the round!</p>
+            <button id="new-game-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
